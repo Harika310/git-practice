@@ -1,6 +1,9 @@
 #!/bin/bash
 
-echo "Ram:: Hi Sam, how are you?"
-echo "Sam:: Hello Ram , I am  good, how are you doing?"
-echo "Ram:: I am doing good Sam, whats going on"
-echo "Sam:: I started learning devops"
+PERSON1=Ram
+PERSON2=Sam
+
+echo "$PERSON1:: Hi $PERSON2, how are you?"
+echo "$PERSON2:: Hello $PERSON1 , I am  good, how are you doing?"
+echo "$PERSON1:: I am doing good $PERSON2, whats going on"
+echo "$PERSON2:: I started learning devops"
