@@ -2,6 +2,7 @@
 
 BAGS=("Michale,Coach,Louis")
 
-echo " first bag is: ${bag[0]}"
-echo " second bag is: ${bag[1]}"
-echo " Third bag is: ${bag[2]}"
+echo " first bag is: ${BAGS[0]}"
+echo " second bag is: ${BAGS[1]}"
+echo " Third bag is: ${BAGS[2]}"
+
