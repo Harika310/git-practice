@@ -23,12 +23,12 @@ fi
 
 dnf list installed mysql
 # $?= previous command
-VALIDATE $? "Listing mysql"
 
-# if [ $? -ne 0 ]
-# then
-#   echo "mysql is not installed, going to install"
-#    dnf install mysql -y 
+if [ $? -ne 0 ]
+then
+  echo "mysql is not installed, going to install"
+   dnf install mysql -y 
+   VALIDATE $? "Installing mysql"
 #     if [ $? -ne 0 ]
 #     then 
 #             echo "mysql installation is failure"
@@ -36,6 +36,6 @@ VALIDATE $? "Listing mysql"
 #     else
 #          echo "mysql installation is success"
 #          fi
-# else
-#       echo "mysql is already installed"
-# fi
+else
+      echo "mysql is already installed"
+fi
