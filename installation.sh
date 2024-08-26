@@ -9,6 +9,7 @@ exit 1
 fi
 
 dnf list installed mysql
+# $?= previous command
 
 if [ $? -ne 0 ]
 then
