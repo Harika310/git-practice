@@ -2,6 +2,15 @@
 
 USERID=$(id -u)
 # echo "user id is: $USERID"
+CHECK_ROOT()
+{
+  if [ $USERID -ne 0 ]
+then
+echo "proceed the script with root privelages"
+exit 1
+fi
+}
+
 
 VALIDATE()
 {
@@ -14,12 +23,8 @@ echo "$2 is ..success"
 fi
 }
 
-if [ $USERID -ne 0 ]
-then
-echo "proceed the script with root privelages"
-exit 1
-fi
 
+CHECK_ROOT
 
 dnf list installed mysql
 # $?= previous command
