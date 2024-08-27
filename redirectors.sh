@@ -1,7 +1,7 @@
 #!/bin/bash
 
 LOGS_FOLDER="/var/log/shell-script"
-SCRIPT_NAME=$(echo $0)
+SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 TIME_STAMP=$(date +Y-%m-%d-%H-%M-%S)
 LOGS_FILE="$LOGS_FOLDER/$SCRIPT_NAME-$TIMESTAMP.log
 mkdir -p $LOGS_FOLDER
@@ -17,7 +17,7 @@ CHECK_ROOT(){
 
 if [ $USERID -ne 0 ]
 then
-echo -e "$R please run the script with root preveliges $N" &>>LOG_FILE
+echo -e "$R please run the script with root priveleges $N" &>>LOG_FILE
 exit 1
 fi
 }
