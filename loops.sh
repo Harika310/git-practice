@@ -25,9 +25,9 @@ VALIDATE()
 {
     if [ $1 -ne 0 ]
     then
-    echo -e "command is ...$R failure"
+    echo -e "$2 is ...$R failure"
     else
-    echo -e "command is ...$G success"
+    echo -e "$2 is ...$G success"
     fi
 }
 
