@@ -8,7 +8,7 @@
 USERID=$(id -u)
 R="\e[31m"
 G="\e[32m"
-# Y="\e[33m"
+Y="\e[33m"
 N="\e[0m"
 
 
@@ -43,7 +43,7 @@ do
    dnf install $package -y
    VALIDATE $? "Installing $package"
    else
-   echo "$package is already installed"
+   echo -e "$Y $package is already installed"
    fi
    done
 
