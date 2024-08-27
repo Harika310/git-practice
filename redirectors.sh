@@ -30,7 +30,18 @@ VALIDATE(){
     fi
 }
 
+USAGE() 
+{
+echo "$R USAGE: $N sudo sh redirectors.sh package1 package2 .."
+exit 1
+}
+
 CHECK_ROOT
+
+if [ $# -eq 0]  # check the no of arguments
+then 
+   USAGE
+fi
 
 
 for package in $@ # $@ refers to all arguments passed to it
