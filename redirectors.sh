@@ -38,7 +38,7 @@ exit 1
 
 CHECK_ROOT
 
-if [ $# -eq 0]  # check the no of arguments
+if [ $# -eq 0 ]  # check the no of arguments
 then 
    USAGE
 fi
