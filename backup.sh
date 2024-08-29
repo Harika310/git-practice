@@ -3,7 +3,7 @@
 SOURCE_DIR=$1
 DEST_DIR=$2
 DAYS=${3:-14}
-# TIMESTAMP= $(date +%y-%m-%d-%h-%m-%s)
+TIMESTAMP= $(date +%y-%m-%d-%h-%m-%s)
 
 R="\e[31m"
 G="\e[32m"
@@ -40,6 +40,24 @@ echo "Files: $FILES"
 if [ ! -z $FILES ]
 then 
 echo "Files are found"
+ZIP_FILE="$DEST_DIR/app-logs-$TIMESTAMP.zip"
+find ${SOURCE_DIR} -name "*.log" -mtime +14 | zip "$ZIP_FILE" -@
+
+# check  if zip file is success or not
+
+if [ -f $ZIP_FILE ]
+then
+echo "successfully zipped older than days $DAYS"
+
+# remove the files after zipping succesfully
+while IFS= read -r file #IFS,internal field seperatpor, empty it will ignore while space.-r is for not to ingore special charecters like /
+do
+    echo "Deleting file: $file"
+    rm -rf $file
+done <<< $FILES
+else
+echo "Zipping the files failed"
+exit 1
 else
 echo "No files older than $DAYS"
 fi
