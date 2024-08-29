@@ -3,7 +3,7 @@
 SOURCE_DIR=$1
 DEST_DIR=$2
 DAYS=${3:-14}
-TIMESTAMP= $(date +%y-%m-%d-%h-%m-%s)
+# TIMESTAMP= $(date +%y-%m-%d-%h-%m-%s)
 
 R="\e[31m"
 G="\e[32m"
