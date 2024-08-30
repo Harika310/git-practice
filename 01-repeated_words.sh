@@ -7,9 +7,15 @@ USAGE(){
     echo -e "$R USAGE:: $N 01-repeated_words.sh <filepath> <searchwords>"
 }
 
-if [ $# -eq 0 ]  # check the no of arguments
-then 
-   USAGE
+# if [ $# -eq 0 ]  # check the no of arguments
+# then 
+#    USAGE
+# fi
+
+if [ $# -lt 2 ]
+then
+    USAGE
+    exit 1
 fi
 
 
