@@ -23,8 +23,8 @@ do
     echo "$line"
 done < "$FILEPATH"
 
-count=$(cat "$FILEPATH" | tr -s ' ' '\n' | sort | uniq -cd)
-repeated_words=$(echo "$count" | uniq -d)
+count=$(cat "$FILEPATH" | tr -s ' ' '\n' | sort)
+repeated_words=$(echo "$count" | uniq -c)
 echo "$repeated_words"
 
 # count=$(cat "$FILEPATH" | grep  | wc -w | cut -d " " -f1)
