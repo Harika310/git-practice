@@ -3,7 +3,7 @@
 FILEPATH=$1
 
 USAGE(){
-    echo -e "$R USAGE:: $N convert.sh <filepath>"
+    echo -e "$R USAGE:: $N 02-convert_rc.sh <filepath>"
 }
 
 if [ $# -eq 0 ]  # check the no of arguments
