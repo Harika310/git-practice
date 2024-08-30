@@ -1,7 +1,7 @@
 #!/bin/bash
 
 FILEPATH=$1
-SEARCH_WORD=$2
+SEARCH_WORDS=$2
 
 USAGE(){
     echo -e "$R USAGE:: $N 01-repeated_words.sh <filepath> <searchwords>"
@@ -20,5 +20,5 @@ else
         echo "File Doesn't exit"
 fi
 
-count=$(cat $FILEPATH | grep $SEARCH_WORD | wc -l)
-echo "$SEARCH_WORD "=" $count"
+count=$(cat $FILEPATH | grep $SEARCH_WORDS | wc -l)
+echo "$SEARCH_WORDS"=" $count"
