@@ -14,7 +14,7 @@ else
     exit 1
 fi
 
-FILES=$(find $FILEPATH -name "*.txt")
+FILES=$(find $FILEPATH -name "*.txt" -mtime +14)
 echo "Files: $FILES"
 
 
