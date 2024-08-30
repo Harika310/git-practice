@@ -20,5 +20,6 @@ else
 fi
 
 count=$(cat $FILEPATH | cut -d" " -f1 | wc -l | uniq -c)
-echo "$SEARCH_WORD"=" $count"
+# echo "$SEARCH_WORD"=" $count"
 
+echo "$count"
