@@ -14,7 +14,7 @@ else
     exit 1
 fi
 
-FILES=$(find ${FILEPATH} -name "abc.txt")
+FILES=$(find $FILEPATH -name "*.txt")
 echo "Files: $FILES"
 
 
