@@ -18,7 +18,8 @@ else
         echo "File Doesn't exit"
 fi
 
-n_cols=$(head -2 "$FILEPATH" | wc -w)
-for i in $(seq 1 "$n_cols"); do
+cols=$(head -2 "$FILEPATH" | wc -w)
+for i in $(seq 1 "$cols")
+do
     echo $(cut -d ' ' -f "$i" "$FILEPATH")
 done
