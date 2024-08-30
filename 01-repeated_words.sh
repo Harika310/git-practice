@@ -1,7 +1,6 @@
 #!/bin/bash
 
 FILEPATH=$1
-SEARCH_WORD=$2
 
 USAGE(){
     echo -e "$R USAGE:: $N 01-repeated_words.sh <filepath>"
@@ -19,7 +18,7 @@ else
         echo "File Doesn't exit"
 fi
 
-cat $FILEPATH | awk -F " " '{print $NF} | cut -d  " " -f1 | uniq -d
-# echo "$SEARCH_WORD"=" $count"
+count=$(cat $FILEPATH | awk -F " " '{print $NF}' | cut -d " " -f1 | uniq -d)
 
-# echo "$count"
+
+echo "$count"
