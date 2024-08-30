@@ -19,6 +19,6 @@ else
         echo "File Doesn't exit"
 fi
 
-count=$(cat $FILEPATH | grep  '[[:alnum:]]\+' -wo $FILEPATH | wc -l | sort | uniq -c)
+count=$(cat $FILEPATH | grep  '[[:alnum:]]\+' -wo $FILEPATH | wc -l | uniq -c)
 echo "$SEARCH_WORD"=" $count"
 
