@@ -18,10 +18,11 @@ else
         echo "File Doesn't exit"
 fi
 
-# while IFS= read -r line 
-# {}
- count=$(echo "$FILEPATH" | grep $FILEPATH | wc -w | cut -d " " -f1 | uniq -c)
-echo "$count"
+while IFS= read -r line; do
+    echo "$line"
+done < "$FILEPATH"
+#  count=$(echo "$FILEPATH" | grep $FILEPATH | wc -w | cut -d " " -f1 | uniq -c)
+# echo "$count"
 
 
 
