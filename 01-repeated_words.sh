@@ -18,7 +18,7 @@ else
         echo "File Doesn't exit"
 fi
 
-count=$(cat $FILEPATH | awk -F " " '{print $NF}' | cut -d " " -f1 | uniq -d)
+count=$(cat $FILEPATH | grep $FILEPATH | awk -F " " '{print $NF}' | cut -d " " -f1 | uniq -d)
 
 
 echo "$count"
