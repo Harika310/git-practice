@@ -4,7 +4,7 @@ FILEPATH=$1
 SEARCH_WORD=$2
 
 USAGE(){
-    echo -e "$R USAGE:: $N 01-repeated_words.sh <argument1> <argument2>"
+    echo -e "$R USAGE:: $N 01-repeated_words.sh <filepath> <searchwords>"
 }
 
 if [ $# -lt 2 ]
