@@ -19,7 +19,7 @@ else
         echo "File Doesn't exit"
 fi
 
-count=$(cat $FILEPATH | cut -d" " -f1 | wc -l)
+count=$(cat $FILEPATH | cut -d " " -f1 | wc -l)
 # echo "$SEARCH_WORD"=" $count"
 
 echo "$count"
