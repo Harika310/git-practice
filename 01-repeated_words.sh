@@ -1,7 +1,7 @@
 #!/bin/bash
 
 FILEPATH=$1
-SEARCH_WORDS=$2
+SEARCH_WORD=$2
 
 USAGE(){
     echo -e "$R USAGE:: $N 01-repeated_words.sh <filepath> <searchwords>"
@@ -12,7 +12,6 @@ then
    USAGE
 fi
 
-
 if [ -f $FILEPATH ]
 then
         echo "File exist"
@@ -20,5 +19,7 @@ else
         echo "File Doesn't exit"
 fi
 
-count=$(cat $FILEPATH | grep $SEARCH_WORDS | wc -l)
-echo "$SEARCH_WORDS"=" $count"
+# count=$(cat $FILEPATH | grep $SEARCH_WORD | wc -l)
+# echo "$SEARCH_WORD"=" $count"
+
+cat "$input_file" | tr -s '[:space:]' '\n' | tr -d '[:punct:]' | sort | uniq -c | sort -nr | head -n 5
