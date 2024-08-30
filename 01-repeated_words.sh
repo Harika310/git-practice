@@ -19,6 +19,6 @@ else
         echo "File Doesn't exit"
 fi
 
-count=$(cat $FILEPATH | grep -wo abc.txt | sort | uniq -c)
+count=$(cat $FILEPATH | grep -wo abc.txt | wc -l | sort | uniq -c)
 echo "$SEARCH_WORD"=" $count"
 
