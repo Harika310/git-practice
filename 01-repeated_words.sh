@@ -23,9 +23,16 @@ do
     echo "$line"
 done < "$FILEPATH"
 
-count=$(cat "$FILEPATH" | tr -s ' ' '\n' | sort)
+count=$(cat "$FILEPATH" | tr -s ' ' '\n' | sort -nr)
 repeated_words=$(echo "$count" | uniq -d)
 echo "$repeated_words"
+# while read count name
+# do
+#         if [ ${count} -gt 1 ]
+#         then
+#                 echo "${name} ${count}"
+#         fi
+# done
 
 
 
