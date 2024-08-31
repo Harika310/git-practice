@@ -26,7 +26,7 @@ else
         echo "File Doesn't exit"
 fi
 
-while IFS= read -r line
-do
-    echo "$line"
-done < "$FILEPATH1" "$FILEPATH2"
+# while IFS= read -r line
+# do
+#     echo "$line"
+# done < "$FILEPATH1" "$FILEPATH2"
