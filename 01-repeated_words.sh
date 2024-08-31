@@ -29,9 +29,9 @@ echo "$repeated_words"
 
 echo "$word_count" | head -n 5 | awk '{print $2 " - " $1 " occurrences"}
 
-# word_count=$(tr -s '[:space:]' '\n' < "$iFILEPATH" | tr -d '[:punct:]' | tr '[:upper:]' '[:lower:]' | grep -v '^$' | sort | uniq -c | sort -nr)
-# echo "Top 5 Most Frequent Words:"
-# echo "$word_count" | head -n 5 | awk '{print $2 " - " $1 " occurrences"}'
+
+
+
 
 
 
