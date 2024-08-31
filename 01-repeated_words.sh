@@ -24,8 +24,10 @@ fi
 # done < "$FILEPATH"
 
 count=$(cat "$FILEPATH" | tr -s ' ' '\n' | sort )
-repeated_words=$(echo "$count" | uniq -c)
+repeated_words=$(echo "$count" | uniq -c | head -n 5)
 echo "$repeated_words"
+
+# echo "$word_count" | head -n 5 | awk '{print $2 " - " $1 " occurrences"}
 
 
 
