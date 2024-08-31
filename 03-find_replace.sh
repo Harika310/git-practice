@@ -1,13 +1,13 @@
 #!/bin/bash
 
-FILEPATH=$1
-FILEPATH=$2
+FILEPATH1=$1
+FILEPATH2=$2
 
 USAGE(){
-    echo -e "$R USAGE:: $N 01-repeated_words.sh <filepath> <filepath>"
+    echo -e "$R USAGE:: $N 01-repeated_words.sh <filepath1> <filepath2>"
 }
 
-if [ $# -lt 2 ]  # check the no of arguments
+if [ $# eq 0 ]  # check the no of arguments
 then 
    USAGE
 fi
@@ -22,4 +22,4 @@ fi
 while IFS= read -r line
 do
     echo "$line"
-done < "$FILEPATH"
+done < "$FILEPATH1" "$FILEPATH2"
