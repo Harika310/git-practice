@@ -24,7 +24,7 @@ fi
 # done < "$FILEPATH"
 
 count=$(cat "$FILEPATH" | tr -s ' ' '\n' | sort )
-repeated_words=$(echo "$count" | uniq -d)
+repeated_words=$(echo "$count" | uniq -c)
 echo "$repeated_words"
 
 
