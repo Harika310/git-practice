@@ -19,7 +19,7 @@ else
         echo "File Doesn't exit"
 fi
 
-if [ -f $FILEPATH 2]
+if [ -f $FILEPATH2 ]
 then
         echo "File exist"
 else
