@@ -3,15 +3,15 @@
 FILEPATH1=/home/ec2-user
 
 
-USAGE(){
-    echo -e "$R USAGE:: $N 01-repeated_words.sh <filepath1>"
-}
+# USAGE(){
+#     echo -e "$R USAGE:: $N 01-repeated_words.sh <filepath1>"
+# }
 
-if [ $# -lt 2 ]
-then
-    USAGE
-    exit 1
-fi
+# if [ $# -lt 2 ]
+# then
+#     USAGE
+#     exit 1
+# fi
 
 if [ -f $FILEPATH1 ]
 then
