@@ -9,10 +9,10 @@ Y="\e[33m"
 FILES=$(find ${SOURCE_DIR} -name "*.txt")
 echo "Files: $FILES"
 
-while read -r file
+while IFS= read -r file
 do
   echo "$file"
-done < $SOURCE_DIR
+done < $FILES
 
 # read -p "Enter the search string:"
 # read -p "Enter the replace string:"
