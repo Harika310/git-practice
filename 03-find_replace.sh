@@ -27,7 +27,8 @@ done
 
 echo "files before replacement"
 
-display=$(cat "$FILEPATH" | tr -s ' ' '\n')
+display=$(cat "$FILEPATH/*.txt" | tr -s ' ' '\n')
+echo "$display"
 
 echo "Replacing a word anvesh with harika"
 
