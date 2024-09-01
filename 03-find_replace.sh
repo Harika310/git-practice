@@ -37,6 +37,3 @@ echo " Contents of the files "  > $t1/t2/content.txt
 # grep '' | xargs sed 's/anvesh/harika/g' "$f"
 # echo "Replacement done"
 # done
-
-
-
