@@ -18,13 +18,7 @@ FILES=$(find ${SOURCE_DIR} -name "*.txt")
 echo "Files: $FILES"
 
 
-while IFS= read -r file #IFS,internal field seperatpor, empty it will ignore while space.-r is for not to ingore special charecters like /
+for f in Files
 do
-    sed -i ':s/ram/anvesh/g' "$file"
-    
-done <<< $FILES
-
-# for FILES in $SOURCE_DIR/*.txt
-#  do
-#     grep ':s/ram/anvesh/g' "$FILES"
-# done
+ sed -i 's/ram/anvesh/g' *.txt "$f"
+done
