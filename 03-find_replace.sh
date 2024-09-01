@@ -9,15 +9,15 @@ Y="\e[33m"
 FILES=$(find ${SOURCE_DIR} -name "*.txt")
 echo "Files: $FILES"
 
-while IFS= read -r file
+while read -r file
 do
   echo "$file"
 done <<< $FILES
 
-# read -p "Enter the search string:"
-# read -p "Enter the replace string:"
-# for f in Files
-# do
-# echo "Processing $f.."
-# grep 'ram' | sed -i 's/ram/anvesh/g' "$f"
-# done
+read -p "Enter the search string:"
+read -p "Enter the replace string:"
+for f in Files
+do
+echo "Processing $f.."
+grep 'ram' | sed -i 's/ram/anvesh/g' "$f"
+done
