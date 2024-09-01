@@ -19,7 +19,7 @@ else
         echo "File Doesn't exit"
 fi
 
-FILES=$(find ${FILEPATH1} -name "*.txt")
+FILES=$(find /home/ec2-user/logs -name "*.txt")
 echo "Files: $FILES"
 
 for file in $FILEPATH/*.txt
