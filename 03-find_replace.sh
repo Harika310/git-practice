@@ -21,7 +21,8 @@ echo "files after replacement"
 for f in Files
 do
 grep 'anvesh' | xargs sed 's/anvesh/harika/g' "$f"
+echo "Replacement done"
 done
 
-echo "Replacement done"
+
 
