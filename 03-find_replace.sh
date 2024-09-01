@@ -16,8 +16,10 @@ do
   echo "$file"
 done <<< $FILES
 
+echo " Replacing a word anvesh with harika
 echo "files after replacement"
 for f in Files
 do
-grep 'ram' | sed -i 's/anvesh/harika/g' "$f"
+grep 'anvesh' | sed -i 's/anvesh/harika/g' "$f"
 done
+echo "Replacement done"
