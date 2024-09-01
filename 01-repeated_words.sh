@@ -19,7 +19,7 @@ fi
 # fi
 
 count=$(cat "$FILEPATH" | tr -s ' ' '\n' | sort)
-repeated_words=$(echo "$count" | uniq -c \ head -n 5 | awk '{print $2 " - " $1 " occurrences"}')
+repeated_words=$(echo "$count" | uniq -c | head -n 5 | awk '{print $2 " - " $1 " occurrences"}')
 echo "$repeated_words"
 
 
