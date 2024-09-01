@@ -18,8 +18,10 @@ FILES=$(find ${SOURCE_DIR} -name "*.txt")
 echo "Files: $FILES"
 
 read -p "Enter the search string:"
+read -p "Enter the replace string:"
 
 for f in Files
 do
- sed -i "s/ram/anvesh/g" $f
+echo "Processing $f file.."
+sed -i "s/ram/anvesh/g" $f
 done
