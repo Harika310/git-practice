@@ -17,7 +17,12 @@ fi
 FILES=$(find ${SOURCE_DIR} -name "*.txt")
 echo "Files: $FILES"
 
-for FILES in $SOURCE_DIR/*.txt
- do
-    grep -i 's/ram/anvesh/g' "$FILES"
-done
+while IFS= read -r file #IFS,internal field seperatpor, empty it will ignore while space.-r is for not to ingore special charecters like /
+do
+    grep -i 's/ram/anvesh/g' "$file"
+done <<< $FILES
+
+# for FILES in $SOURCE_DIR/*.txt
+#  do
+#     grep -i 's/ram/anvesh/g' "$FILES"
+# done
