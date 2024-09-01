@@ -20,7 +20,7 @@ echo "Files: $FILES"
 
 while IFS= read -r file #IFS,internal field seperatpor, empty it will ignore while space.-r is for not to ingore special charecters like /
 do
-    grep ':s/ram/anvesh/g' "$file"
+    sed -i ':s/ram/anvesh/g' "$file"
     
 done <<< $FILES
 
