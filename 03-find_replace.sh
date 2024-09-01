@@ -17,7 +17,7 @@ fi
 FILES=$(find ${SOURCE_DIR} -name "*.txt")
 echo "Files: $FILES"
 
-# for file in $FILEPATH/*.txt
-#  do
-#     sed -i 's/ram/anvesh/g' "$file"
-# done
+for file in $SOURCE_DIR/*.txt
+ do
+    sed -i 's/ram/anvesh/g' "$file"
+done
