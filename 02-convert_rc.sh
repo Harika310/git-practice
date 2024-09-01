@@ -14,7 +14,7 @@ fi
 while read -r line
 do
   echo "$line"
-done <"file"
+done < $FILEPATH
 
 cols=$(head -2 "$FILEPATH" | wc -w)
 for i in $(seq 1 "$cols")
