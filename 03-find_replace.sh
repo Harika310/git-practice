@@ -14,7 +14,7 @@ echo "files before replacement"
 while read -r file
 do
   echo "$file"
-done < $FILES
+done <<< $FILES
 
 echo "files after replacement"
 for f in Files
