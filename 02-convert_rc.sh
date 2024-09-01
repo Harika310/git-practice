@@ -10,7 +10,7 @@ if [ $# -eq 0 ]  # check the no of arguments
 then 
    USAGE
 fi
-echo "original data is: $FILEPATH"
+echo "original data is:cat $FILEPATH"
 
 cols=$(head -2 "$FILEPATH" | wc -w)
 for i in $(seq 1 "$cols")
