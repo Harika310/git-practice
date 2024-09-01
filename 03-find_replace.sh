@@ -12,7 +12,7 @@ echo "Files: $FILES"
 while IFS= read -r file
 do
   echo "$file"
-done < $FILES
+done <<< $FILES
 
 # read -p "Enter the search string:"
 # read -p "Enter the replace string:"
