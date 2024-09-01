@@ -14,7 +14,7 @@ echo "files before replacement"
 while read -r file
 do
   echo "$file"
-done <<< $FILES
+done <<< $FILES >> .txt
 
 echo "Replacing a word anvesh with harika"
 echo "files after replacement"
