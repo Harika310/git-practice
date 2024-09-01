@@ -23,5 +23,5 @@ read -p "Enter the replace string:"
 for f in Files
 do
 echo "Processing $f.."
-grep 'ram' | xargs sed -i 's/ram/anvesh/g' "$f"
+grep 'ram' | sed -i 's/ram/anvesh/g' "$f"
 done
