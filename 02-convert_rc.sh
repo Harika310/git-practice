@@ -2,21 +2,24 @@
 
 FILEPATH=/home/ec2-user/abc.txt
 
-USAGE(){
-    echo -e "$R USAGE:: $N 02-convert_rc.sh <filepath>"
-}
+# USAGE(){
+#     echo -e "$R USAGE:: $N 02-convert_rc.sh <filepath>"
+# }
 
-if [ $# -eq 0 ]  # check the no of arguments
-then 
-   USAGE
+# if [ $# -eq 0 ]  # check the no of arguments
+# then 
+#    USAGE
+# fi
+
+if [ -f $FILEPATH ]
+then
+        echo "File exist"
+else
+        echo "File Doesn't exit"
+        exit 1
 fi
 
-# if [ -f $FILEPATH ]
-# then
-#         echo "File exist"
-# else
-#         echo "File Doesn't exit"
-# fi
+
 echo "Please enter your data:"
 read  DATA
 
