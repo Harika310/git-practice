@@ -26,10 +26,15 @@ do
 done
 
 echo "files before replacement"
-for i in $( cat $FILEPATH /.txt )
-do
-echo "$i" 
-done
+
+FILES=$(cat ${FILEPATH} -name "*.txt")
+echo "Files: $FILES"
+
+
+# for i in $( cat $FILEPATH /.txt )
+# do
+# echo "$i" 
+# done
 
 # echo "Replacing a word anvesh with harika"
 # echo "files after replacement"
