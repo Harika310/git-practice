@@ -19,7 +19,7 @@ else
         echo "File Doesn't exit"
 fi
 
-FILES=$(find ${FILEPATH1} -name "*.txt" -mtime +14)
+FILES=$(find ${FILEPATH1} -name "*.txt")
 echo "Files: $FILES"
 
 for file in $FILEPATH/*.txt
