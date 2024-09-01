@@ -18,10 +18,10 @@ else
         echo "File Doesn't exit"
 fi
 
-# while IFS= read -r line
-# do
-#     echo "$line"
-# done < "$FILEPATH"
+while IFS= read -r line
+do
+    echo "$line"
+done < "$FILEPATH"
 
 count=$(cat "$FILEPATH" | tr -s ' ' '\n' | sort )
 repeated_words=$(echo "$count" | uniq -c)
