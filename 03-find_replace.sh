@@ -27,18 +27,11 @@ done
 
 echo "files before replacement"
 
-while IFS= read -r file
+echo "Replacing a word anvesh with harika"
+
+echo "files after replacement"
+for f in Files
 do
-  echo "$file"
-done <<< $FILEPATH
-
-
-
-
-# echo "Replacing a word anvesh with harika"
-# echo "files after replacement"
-# for f in Files
-# do
-# grep '' | xargs sed 's/anvesh/harika/g' "$f"
-# echo "Replacement done"
-# done
+grep 'anvesh' | xargs sed 's/anvesh/harika/g' "$f"
+echo "Replacement done"
+done
