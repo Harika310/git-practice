@@ -28,7 +28,8 @@ done
 echo "files before replacement"
 for i in $( cat $a/b/c.txt )
 do
-echo " Contents of the files "  > $t1/t2/content.txt
+echo " Contents of the files "  > $t1/t2/content.
+done
 
 # echo "Replacing a word anvesh with harika"
 # echo "files after replacement"
