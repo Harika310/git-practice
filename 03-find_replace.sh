@@ -22,6 +22,6 @@ read -p "Enter the replace string:"
 
 for f in Files
 do
-echo "Processing $f file.."
-sed -i "s/ram/anvesh/g" $f
+echo "Processing $f.."
+sed "s/ram/anvesh/g" $f
 done
