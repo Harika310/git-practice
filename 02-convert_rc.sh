@@ -10,13 +10,7 @@ if [ $# -eq 0 ]  # check the no of arguments
 then 
    USAGE
 fi
-# if [ -f $FILEPATH ]
-# then
-#         echo "File exist"
-# else
-#         echo "File Doesn't exit"
-#         exit 1
-# fi
+echo "original data is: $FILEPATH"
 
 cols=$(head -2 "$FILEPATH" | wc -w)
 for i in $(seq 1 "$cols")
