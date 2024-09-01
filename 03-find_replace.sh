@@ -7,10 +7,9 @@ USAGE(){
     echo -e "$R USAGE:: $N 03-find_replace.sh <filepath1>"
 }
 
-if [ $# -lt 2 ]
-then
-    USAGE
-    exit 1
+if [ $# -eq 0 ]  # check the no of arguments
+then 
+   USAGE
 fi
 
 if [ -f $FILEPATH1 ]
@@ -19,6 +18,9 @@ then
 else
         echo "File Doesn't exit"
 fi
+
+FILES=$(find ${FILEPATH1} -name "*.txt" -mtime +14)
+echo "Files: $FILES"
 
 for file in $FILEPATH/*.txt
  do
