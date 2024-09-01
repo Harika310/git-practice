@@ -11,9 +11,9 @@ then
    USAGE
 fi
 
-while read -r line
+while read -r file
 do
-  echo "Original data is: $line"
+  echo "Original data is: $file"
 done < $FILEPATH
 
 cols=$(head -2 "$FILEPATH" | wc -w)
