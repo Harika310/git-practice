@@ -1,28 +1,23 @@
 #!/bin/bash
 
-FILEPATH1=/home/ec2-user/logs
+SOURCE_DIR=/home/ec2-user/logs
+R="\e[31m"
+G="\e[32m"
+N="\e[0m"
+Y="\e[33m"
 
-
-# USAGE(){
-#     echo -e "$R USAGE:: $N 03-find_replace.sh <filepath1>"
-# }
-
-# if [ $# -eq 0 ]  # check the no of arguments
-# then 
-#    USAGE
-# fi
-
-if [ -f $FILEPATH1 ]
+if [ -d $SOURCE_DIR ]
 then
-        echo "File exist"
+    echo -e "$SOURCE_DIR $G Exists $N"
 else
-        echo "File Doesn't exit"
+    echo -e "$SOURCE_DIR $R does not exist $N"
+    exit 1
 fi
 
-FILES=$(find /home/ec2-user/logs -name "*.txt")
+FILES=$(find ${SOURCE_DIR} -name "*.txt" -mtime +14)
 echo "Files: $FILES"
 
-for file in $FILEPATH/*.txt
- do
-    sed -i 's/ram/anvesh/g' "$file"
-done
+# for file in $FILEPATH/*.txt
+#  do
+#     sed -i 's/ram/anvesh/g' "$file"
+# done
