@@ -1,15 +1,26 @@
 #!/bin/bash
 
-SOURCE_DIR=/home/ec2-user/logs
-R="\e[31m"
-G="\e[32m"
-N="\e[0m"
-Y="\e[33m"
+# SOURCE_DIR=/home/ec2-user/logs
+# R="\e[31m"
+# G="\e[32m"
+# N="\e[0m"
+# Y="\e[33m"
 
-FILES=$(find ${SOURCE_DIR} -name "*.txt")
-echo "Files: $FILES"
+# FILES=$(find ${SOURCE_DIR} -name "*.txt")
+# echo "Files: $FILES"
 
-for files in "$SOURCE_DIR"/*
+FILEPATH=$1
+
+USAGE(){
+    echo -e "$R USAGE:: $N 02-convert_rc.sh <filepath>"
+}
+
+if [ $# -eq 0 ]  # check the no of arguments
+then 
+   USAGE
+fi
+
+for files in "$FILEPATH"/*
 do
   echo "$files"
 done
