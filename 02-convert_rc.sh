@@ -20,10 +20,10 @@ fi
 echo "Please enter your data:"
 read  DATA
 
-echo "data entered is: $DATA"
+echo "Before data is: $DATA"
 
  echo "After converting data" 
-cols=$ead  DATA(head -2 "$FILEPATH" | wc -l)
+cols=$(head -2 "$FILEPATH" | wc -l)
 for i in $(seq 1 "$cols")
 do
     echo $(cut -d ' ' -f "$i" "$FILEPATH")
