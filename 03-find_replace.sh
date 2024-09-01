@@ -12,7 +12,7 @@
 FILEPATH=$1
 
 USAGE(){
-    echo -e "$R USAGE:: $N 02-convert_rc.sh <filepath>"
+    echo -e "$R USAGE:: $N 03-find_replace.sh <filepath>"
 }
 
 if [ $# -eq 0 ]  # check the no of arguments
@@ -20,25 +20,23 @@ then
    USAGE
 fi
 
-for files in " "/*
+for files in "$FILEPATH"/*
 do
   echo "$files"
 done
 
 echo "files before replacement"
-
-# while read -r file
-# do
-#   echo "$file"
-# done <<< $FILES
-
-echo "Replacing a word anvesh with harika"
-echo "files after replacement"
-for f in Files
+for i in $( cat $a/b/c.txt )
 do
-grep '' | xargs sed 's/anvesh/harika/g' "$f"
-echo "Replacement done"
-done
+echo " Contents of the files "  > $t1/t2/content.txt
+
+# echo "Replacing a word anvesh with harika"
+# echo "files after replacement"
+# for f in Files
+# do
+# grep '' | xargs sed 's/anvesh/harika/g' "$f"
+# echo "Replacement done"
+# done
 
 
 
