@@ -18,7 +18,7 @@ else
         echo "File Doesn't exit"
 fi
 
-count=$(cat "$FILEPATH" | tr -s ' ' '\n' | sort )
+count=$(cat "$FILEPATH" | tr -s ' ' '\n' | sort | head -n 5)
 repeated_words=$(echo "$count" | uniq -c)
 echo "$repeated_words"
 
