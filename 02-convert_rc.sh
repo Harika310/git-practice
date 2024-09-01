@@ -17,8 +17,7 @@ do
   echo "$file"
 done < $FILEPATH
 
-
-echo "convert to columns"
+echo "convert to columns '\n'"
 cols=$(head -2 "$FILEPATH" | wc -w)
 for i in $(seq 1 "$cols")
 do
