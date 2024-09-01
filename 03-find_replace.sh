@@ -27,10 +27,10 @@ done
 
 echo "files before replacement"
 
-while read -r file
+while IFS= read -r file
 do
   echo "$file"
-done < $FILEPATH
+done <<< $FILEPATH
 
 
 
