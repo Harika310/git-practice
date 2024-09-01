@@ -19,5 +19,5 @@ echo "Files: $FILES"
 
 for FILES in $SOURCE_DIR/*.txt
  do
-    sed -i 's/ram/anvesh/g' "$FILES"
+    grep -i 's/ram/anvesh/g' "$FILES"
 done
