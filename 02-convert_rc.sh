@@ -13,7 +13,7 @@ fi
 
 while read -r file
 do
-  echo "Original data is: $file"
+  echo "Original data:\n  $file"
 done < $FILEPATH
 
 cols=$(head -2 "$FILEPATH" | wc -w)
