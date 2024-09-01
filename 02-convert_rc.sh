@@ -13,6 +13,7 @@ fi
 
 while read -r file
 do
+echo "original data"
   echo "$file"
 done < $FILEPATH
 
