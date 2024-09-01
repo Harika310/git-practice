@@ -20,7 +20,7 @@ then
    USAGE
 fi
 
-for files in "$FILEPATH"/*
+for files in " "/*
 do
   echo "$files"
 done
