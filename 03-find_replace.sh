@@ -27,11 +27,13 @@ done
 
 echo "files before replacement"
 
+display=$(cat "$FILEPATH" | tr -s ' ' '\n')
+
 echo "Replacing a word anvesh with harika"
 
 echo "files after replacement"
 for f in Files
 do
-grep 'anvesh' | xargs sed 's/anvesh/harika/g' "$f"
+grep 'anvesh' | xargs sed -i 's/anvesh/harika/g' "$f"
 echo "Replacement done"
 done
