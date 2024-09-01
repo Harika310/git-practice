@@ -11,15 +11,15 @@ then
    USAGE
 fi
 
-if [ -f $FILEPATH ]
-then
-        echo "File exist"
-else
-        echo "File Doesn't exit"
-fi
+# if [ -f $FILEPATH ]
+# then
+#         echo "File exist"
+# else
+#         echo "File Doesn't exit"
+# fi
 
 count=$(cat "$FILEPATH" | tr -s ' ' '\n' | sort)
-repeated_words=$(echo "$count" | uniq -d)
+repeated_words=$(echo "$count" | uniq -c \ head -n 5 | awk '{print $2 " - " $1 " occurrences"}')
 echo "$repeated_words"
 
 
