@@ -19,7 +19,7 @@ else
 fi
 
 count=$(cat "$FILEPATH" | tr -s ' ' '\n' | sort | head -n 5)
-repeated_words=$(echo "$count" | uniq -c)
+repeated_words=$(echo "$count" | uniq -d)
 echo "$repeated_words"
 
 
