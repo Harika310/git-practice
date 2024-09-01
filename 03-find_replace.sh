@@ -27,8 +27,10 @@ done
 
 echo "files before replacement"
 
-display=$(cat $FILEPATH -name "*.txt")
-echo "display content of files: $display"
+while read -r file
+do
+  echo "$file"
+done < $FILEPATH
 
 
 
