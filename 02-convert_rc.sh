@@ -17,7 +17,7 @@ else
         echo "File Doesn't exit"
         exit 1
 fi
- 
+
 cols=$(head -2 "$FILEPATH" | wc -w)
 for i in $(seq 1 "$cols")
 do
