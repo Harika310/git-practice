@@ -20,7 +20,7 @@
 # fi
 
 
-echo "Please enter your data: \n"
+echo -e "Please enter your data\n"
 read  DATA
 
 echo "Before data: $DATA"
