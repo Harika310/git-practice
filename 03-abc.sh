@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FILEPATH=$/home/ec2-user/abc.txt
+FILEPATH=$/home/ec2-user/
 
 
 if [ -f $FILEPATH ]
@@ -11,6 +11,8 @@ else
         exit 1
 fi
 
+FILES=$(find ${FILEPATH} -name "*.txt" -mtime +14)
+echo "Files: $FILES"
 
 echo  "Please enter your data"
 read  DATA
