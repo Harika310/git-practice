@@ -6,7 +6,7 @@ G="\e[32m"
 N="\e[0m"
 Y="\e[33m"
 
-FILES=$(find ${SOURCE_DIR} -name "*.txt")
+FILES=$(find ${SOURCE_DIR} -name "*.txt" | cat "*.txt")
 echo "Files: $FILES"
 
 echo "files before replacement"
@@ -14,7 +14,7 @@ echo "files before replacement"
 while read -r file
 do
   echo "$file"
-done <<< $FILES >> .txt
+done <<< $FILES
 
 echo "Replacing a word anvesh with harika"
 echo "files after replacement"
