@@ -1,8 +1,15 @@
 #!/bin/bash
 
-FILEPATH=$/home/ec2-user/
+FILEPATH=$1
 
+USAGE(){
+    echo -e "$R USAGE:: $N 03-abc.sh <filepath>"
+}
 
+if [ $# -eq 0 ]  # check the no of arguments
+then 
+   USAGE
+fi
 if [ -f $FILEPATH ]
 then
         echo "File exist"
@@ -11,8 +18,6 @@ else
         exit 1
 fi
 
-FILES=$(find ${FILEPATH} -name "*.txt" -mtime +14)
-echo "Files: $FILES"
 
 echo  "Please enter your data"
 read  DATA
