@@ -18,8 +18,8 @@ fi
 #         echo "File Doesn't exit"
 # fi
 
-count=$(cat "$FILEPATH" | tr -s ' ' '\n' | sort)
-repeated_words=$(echo "$count" | uniq -d | head -n 5 | awk '{print $2 " - " $1}')
+count=$(cat "$FILEPATH" | tr -s ' ' '\n' | sort -nr)
+repeated_words=$(echo "$count" | uniq -c| head -n 5 | awk '{print $2 " - " $1}')
 echo "$repeated_words"
 
 
